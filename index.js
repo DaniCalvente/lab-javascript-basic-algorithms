@@ -40,6 +40,7 @@ for (let i = 0; i < hacker1.length; i++) {
 console.log(driverCapitalized);
 
 // 3.2 Reverse order
+
 let reversedNavigator = "";
 
 for (let i = hacker2.length - 1; i >= 0; i--) {
@@ -48,3 +49,26 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
 console.log(reversedNavigator);
 
 // 3.3 Lexicographic order
+
+let longestName = "";
+
+if (hacker1.length < hacker2.length) {
+  longestName = hacker2;
+} else {
+  longestName = hacker1;
+}
+
+for (let i = 0; i < longestName.length; i++) {
+  if (hacker1 === hacker2) {
+    console.log("What?! You both have the same name?");
+    break;
+  } else if (hacker1[i] < hacker2[i] || hacker1[i] === undefined) {
+    console.log(`The driver's ${hacker1} goes first.`);
+    break;
+  } else if (hacker2[i] < hacker1[i] || hacker2[i] === undefined) {
+    console.log(`Yo, the navigator ${hacker2} goes first definitely.`);
+    break;
+  }
+}
+
+// Bonus 1. lorem ipsum generator
