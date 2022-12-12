@@ -76,6 +76,8 @@ for (let i = 0; i < longestName.length; i++) {
 let longText =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet est at justo tempor mollis. Aliquam consequat lacinia interdum. Fusce sodales dui a elit pulvinar ornare. Integer ullamcorper nunc vel finibus venenatis. Sed lectus velit, lacinia non posuere a, porta fringilla turpis. Cras sagittis erat malesuada risus posuere fringilla. Etiam vulputate dolor metus, in pharetra velit dictum non. Vivamus eu augue nec est tempus viverra. Phasellus eu augue volutpat, fermentum risus et, dapibus purus. Quisque vel augue mauris. Maecenas mattis ipsum sit amet metus dictum, quis pharetra enim cursus. Sed ac ullamcorper turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In consectetur diam ac turpis malesuada rutrum. Sed porta nulla id enim vulputate, eu tristique tortor cursus.";
 
+// Counting total amount of words
+
 let wordsCounter = 1;
 
 for (let i = 0; i < longText.length; i++) {
@@ -84,5 +86,21 @@ for (let i = 0; i < longText.length; i++) {
   }
 }
 console.log("Total Words: " + wordsCounter);
+
+// Counting how many times the word "et" appears in the text.
+
+let etCounter = 0;
+
+for (let i = 0; i < longText.length; i++) {
+  if (
+    longText[i] === " " &&
+    longText[i + 1] === "e" &&
+    longText[i + 2] === "t" &&
+    (longText[i + 3] === " " || "," || ".")
+  ) {
+    etCounter++;
+  }
+}
+console.log("Total of et: " + etCounter);
 
 // Bonus 2. Palindrome
