@@ -1,4 +1,4 @@
-// Iteration 1: Names and Input
+//! Iteration 1: Names and Input
 
 hacker1 = "Peter";
 console.log(`The driver's name is ${hacker1}`);
@@ -6,7 +6,7 @@ console.log(`The driver's name is ${hacker1}`);
 hacker2 = "Mary";
 console.log(`The navigator's name is ${hacker2}`);
 
-// Iteration 2: Conditionals
+//! Iteration 2: Conditionals
 
 if (hacker1.length > hacker2.length) {
   console.log(
@@ -22,9 +22,9 @@ if (hacker1.length > hacker2.length) {
   );
 }
 
-// Iteration 3: Loops
+//! Iteration 3: Loops
 
-// 3.1 Capitalize and spacing
+//! 3.1 Capitalize and spacing
 
 let driverCapitalized = "";
 
@@ -39,7 +39,7 @@ for (let i = 0; i < hacker1.length; i++) {
 }
 console.log(driverCapitalized);
 
-// 3.2 Reverse order
+//! 3.2 Reverse order
 
 let reversedNavigator = "";
 
@@ -48,7 +48,7 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
 }
 console.log(reversedNavigator);
 
-// 3.3 Lexicographic order
+//! 3.3 Lexicographic order
 
 let longestName = "";
 
@@ -71,7 +71,7 @@ for (let i = 0; i < longestName.length; i++) {
   }
 }
 
-// Bonus 1. lorem ipsum generator
+//! Bonus 1. lorem ipsum generator
 
 let longText =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet est at justo tempor mollis. Aliquam consequat lacinia interdum. Fusce sodales dui a elit pulvinar ornare. Integer ullamcorper nunc vel finibus venenatis. Sed lectus velit, lacinia non posuere a, porta fringilla turpis. Cras sagittis erat malesuada risus posuere fringilla. Etiam vulputate dolor metus, in pharetra velit dictum non. Vivamus eu augue nec est tempus viverra. Phasellus eu augue volutpat, fermentum risus et, dapibus purus. Quisque vel augue mauris. Maecenas mattis ipsum sit amet metus dictum, quis pharetra enim cursus. Sed ac ullamcorper turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In consectetur diam ac turpis malesuada rutrum. Sed porta nulla id enim vulputate, eu tristique tortor cursus.";
@@ -103,4 +103,31 @@ for (let i = 0; i < longText.length; i++) {
 }
 console.log("Total of et: " + etCounter);
 
-// Bonus 2. Palindrome
+//! Bonus 2. Palindrome
+
+let phraseToCheck = "Was it a car or a cat I saw?";
+
+let cleanString = "";
+
+// Removing special characters and spaces.
+for (let i = 0; i < phraseToCheck.length; i++) {
+  if (phraseToCheck[i] >= "A" && phraseToCheck[i] <= "z") {
+    cleanString = cleanString + phraseToCheck[i];
+  }
+}
+// console.log("cleanString:", cleanString)
+
+// Reversing the string.
+let reversedString = "";
+
+for (let i = cleanString.length - 1; i >= 0; i--) {
+  reversedString = reversedString + cleanString[i];
+}
+// console.log("reversedString:", reversedString)
+
+// Now, we compare both strings
+if (cleanString.toLowerCase() === reversedString.toLowerCase()) {
+  console.log("Great!!, this is a palindrome!");
+} else {
+  console.log("Sorry, this is NOT a palindrome!");
+}
