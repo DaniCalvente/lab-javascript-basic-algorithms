@@ -84,3 +84,5 @@ for (let i = 0; i < longText.length; i++) {
   }
 }
 console.log("Total Words: " + wordsCounter);
+
+// Bonus 2. Palindrome
